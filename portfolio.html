@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhandeep Kaur - Product Manager Portfolio</title>
+    
+    <!-- Tailwind CSS (Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons (Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Config for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#151e2e',
+                            950: '#020617',
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Utilities */
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background-color: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 1);
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-200 selection:bg-teal-500/30">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-slate-950/90 shadow-lg backdrop-blur-md py-4" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tighter">
+                SK<span class="text-teal-400">.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors">About</a>
+                <a href="#work" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors">Work</a>
+                <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors">Skills</a>
+                <a href="#experience" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors">Experience</a>
+                <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 absolute w-full px-6 py-4 flex flex-col space-y-4 shadow-xl">
+            <a href="#about" class="text-slate-300 hover:text-teal-400 font-medium mobile-link">About</a>
+            <a href="#work" class="text-slate-300 hover:text-teal-400 font-medium mobile-link">Work</a>
+            <a href="#skills" class="text-slate-300 hover:text-teal-400 font-medium mobile-link">Skills</a>
+            <a href="#experience" class="text-slate-300 hover:text-teal-400 font-medium mobile-link">Experience</a>
+            <a href="#contact" class="text-slate-300 hover:text-teal-400 font-medium mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-950">
+        <!-- Abstract Background -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-teal-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-blue-600/5 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 rounded-full px-4 py-1.5 mb-6">
+                    <span class="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></span>
+                    <span class="text-teal-400 text-sm font-medium tracking-wide uppercase">Product Manager</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                    Transforming Manufacturing with <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+                        Data Intelligence.
+                    </span>
+                </h1>
+                
+                <p class="text-xl text-slate-400 mb-8 max-w-2xl leading-relaxed">
+                    I build AI-driven products that optimize the shop floor. 
+                    Specializing in CNC analytics, Industry 4.0, and digital transformation.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold rounded-lg transition-all flex items-center justify-center gap-2">
+                        Get in Touch <i data-lucide="chevron-right" width="20"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sukhandeep-kaur-706a74ba" target="_blank" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-700 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="linkedin" width="20"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-950 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">About Me</h2>
+            <p class="text-lg text-slate-400 leading-relaxed">
+                Results-oriented Product Manager with over 5 years of experience in building and scaling data-driven products that enhance operational efficiency, tool utilization, and process visibility for machining environments. Expert in connecting engineering, operations, and business objectives to deliver measurable value in Industry 4.0.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Product -->
+    <section id="work" class="py-24 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                    Featured Product
+                    <span class="absolute -bottom-2 left-0 w-16 h-1 bg-teal-500 rounded-full"></span>
+                </h2>
+                <p class="text-slate-400 mt-2 max-w-2xl">My most recent work in AI-assisted manufacturing software.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-0">
+                    
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-3 bg-teal-500/10 rounded-lg">
+                                <i data-lucide="cpu" class="text-teal-400" width="32" height="32"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Lambda Function</h3>
+                        </div>
+                        
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            An AI-assisted CNC Machining Software designed to bridge the gap between engineering design and shop-floor execution. As the Product Manager, I led the transformation of raw machine data into actionable operational insights.
+                        </p>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-2 w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></div>
+                                <span class="text-slate-400">Enhanced tool utilization & process visibility</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-2 w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></div>
+                                <span class="text-slate-400">Connected engineering, operations & business goals</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-2 w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></div>
+                                <span class="text-slate-400">SaaS platform for Industry 4.0 transformation</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://www.lambdafunction.ai/" target="_blank" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 font-medium transition-colors">
+                            Visit Platform <i data-lucide="external-link" width="16"></i>
+                        </a>
+                    </div>
+
+                    <!-- Visual Representation -->
+                    <div class="bg-slate-950 relative p-8 md:p-12 flex items-center justify-center border-l border-slate-800">
+                        <div class="grid grid-cols-2 gap-4 w-full max-w-md opacity-80 z-10">
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 aspect-square flex flex-col items-center justify-center text-center gap-3">
+                                <i data-lucide="bar-chart-3" class="text-blue-400" width="40" height="40"></i>
+                                <span class="text-slate-300 font-medium">Analytics</span>
+                            </div>
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 aspect-square flex flex-col items-center justify-center text-center gap-3">
+                                <i data-lucide="brain" class="text-purple-400" width="40" height="40"></i>
+                                <span class="text-slate-300 font-medium">AI Models</span>
+                            </div>
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 aspect-square flex flex-col items-center justify-center text-center gap-3">
+                                <i data-lucide="settings" class="text-orange-400" width="40" height="40"></i>
+                                <span class="text-slate-300 font-medium">CNC Data</span>
+                            </div>
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 aspect-square flex flex-col items-center justify-center text-center gap-3">
+                                <i data-lucide="users" class="text-teal-400" width="40" height="40"></i>
+                                <span class="text-slate-300 font-medium">User Centric</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                    Technical Proficiency
+                    <span class="absolute -bottom-2 left-0 w-16 h-1 bg-teal-500 rounded-full"></span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="glass-card p-6 rounded-xl hover:border-teal-500/50 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="pen-tool" class="text-purple-400"></i>
+                        <h3 class="text-xl font-bold text-white">Product & Design</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 text-sm rounded border border-purple-500/20">Product Strategy</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 text-sm rounded border border-purple-500/20">Roadmapping</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 text-sm rounded border border-purple-500/20">Backlog Prioritization</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 text-sm rounded border border-purple-500/20">Agile & Scrum</span>
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-300 text-sm rounded border border-purple-500/20">User Research</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass-card p-6 rounded-xl hover:border-teal-500/50 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="database" class="text-teal-400"></i>
+                        <h3 class="text-xl font-bold text-white">Analytics & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 text-sm rounded border border-teal-500/20">SQL & Data</span>
+                        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 text-sm rounded border border-teal-500/20">Power BI</span>
+                        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 text-sm rounded border border-teal-500/20">JIRA</span>
+                        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 text-sm rounded border border-teal-500/20">Figma</span>
+                        <span class="px-3 py-1 bg-teal-500/10 text-teal-300 text-sm rounded border border-teal-500/20">Draw.io</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass-card p-6 rounded-xl hover:border-teal-500/50 transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="settings" class="text-blue-400"></i>
+                        <h3 class="text-xl font-bold text-white">Domain Expertise</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-300 text-sm rounded border border-blue-500/20">Manufacturing Tech</span>
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-300 text-sm rounded border border-blue-500/20">CNC Monitoring</span>
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-300 text-sm rounded border border-blue-500/20">Industry 4.0</span>
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-300 text-sm rounded border border-blue-500/20">SaaS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-slate-950">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 relative inline-block">
+                    Employment Highlights
+                    <span class="absolute -bottom-2 left-0 w-16 h-1 bg-teal-500 rounded-full"></span>
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Job 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2"></div>
+                    <div class="md:flex items-start justify-between group md:flex-row-reverse">
+                        <div class="md:w-1/2 mb-2 md:mb-0 md:pl-12 text-left">
+                            <span class="inline-block py-1 px-3 rounded-full bg-slate-900 border border-slate-700 text-teal-400 text-sm font-semibold mb-2">Jan 2023 – Present</span>
+                            <h4 class="text-xl font-bold text-white">Lambda Function (IDS Infotech Ltd.)</h4>
+                            <p class="text-slate-500 text-sm">Remote / Chandigarh</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-slate-600 rounded-full border-4 border-slate-950 -translate-x-[5px] md:-translate-x-1/2 mt-1.5 group-hover:bg-teal-500 transition-colors z-10"></div>
+                        <div class="md:w-1/2 md:pr-12">
+                            <h3 class="text-xl font-bold text-teal-400 mb-2">Product Manager</h3>
+                            <p class="text-slate-300 mb-4 text-sm leading-relaxed">Leading end-to-end product lifecycle for an AI-assisted CNC Machining SaaS platform.</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><span class="text-teal-500 mt-1">›</span> Lead strategy, requirements, and release planning.</li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><span class="text-teal-500 mt-1">›</span> Partnered with engineering/design for high-quality releases.</li>
+                                <li class="flex items-start gap-2 text-sm text-slate-400"><span class="text-teal-500 mt-1">›</span> Drove UAT and continuous iterative improvements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-1/2 mb-2 md:mb-0 md:pr-12 md:text-right">
+                            <span class="inline-block py-1 px-3 rounded-full bg-slate-900 border border-slate-700 text-teal-400 text-sm font-semibold mb-2">Jan 2022 – Jan 2023</span>
+                            <h4 class="text-xl font-bold text-white">Lambda Function (IDS Infotech Ltd.)</h4>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-slate-600 rounded-full border-4 border-slate-950 -translate-x-[5px] md:-translate-x-1/2 mt-1.5 group-hover:bg-teal-500 transition-colors z-10"></div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <h3 class="text-xl font-bold text-teal-400 mb-2">Project Coordinator</h3>
+                            <p class="text-slate-300 mb-4 text-sm leading-relaxed">Bridged the gap between technical teams and clients to ensure successful deployment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Job 3 -->
+                 <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2"></div>
+                    <div class="md:flex items-start justify-between group md:flex-row-reverse">
+                        <div class="md:w-1/2 mb-2 md:mb-0 md:pl-12 text-left">
+                            <span class="inline-block py-1 px-3 rounded-full bg-slate-900 border border-slate-700 text-teal-400 text-sm font-semibold mb-2">Jun 2019 – Jan 2022</span>
+                            <h4 class="text-xl font-bold text-white">IDS Infotech Ltd.</h4>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-4 h-4 bg-slate-600 rounded-full border-4 border-slate-950 -translate-x-[5px] md:-translate-x-1/2 mt-1.5 group-hover:bg-teal-500 transition-colors z-10"></div>
+                        <div class="md:w-1/2 md:pr-12">
+                            <h3 class="text-xl font-bold text-teal-400 mb-2">Business Analyst</h3>
+                            <p class="text-slate-300 mb-4 text-sm leading-relaxed">Developed BRDs, PRDs, and conducted gap analysis for product enhancements.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs -->
+    <section class="py-24 bg-slate-950 border-t border-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Certifications -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <i data-lucide="award" class="text-teal-400" width="28"></i>
+                        <h3 class="text-2xl font-bold text-white">Certifications</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-slate-900 rounded-lg border border-slate-800">
+                            <div class="mt-2 w-2 h-2 bg-teal-500 rounded-full"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Artificial Intelligence Micro-Certification</h4>
+                                <p class="text-slate-500 text-sm">Product School</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-slate-900 rounded-lg border border-slate-800">
+                            <div class="mt-2 w-2 h-2 bg-teal-500 rounded-full"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Product Road Mapping Micro-Certification</h4>
+                                <p class="text-slate-500 text-sm">Product School</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-slate-900 rounded-lg border border-slate-800">
+                            <div class="mt-2 w-2 h-2 bg-teal-500 rounded-full"></div>
+                            <div>
+                                <h4 class="text-white font-semibold">Jira Fundamentals Badge</h4>
+                                <p class="text-slate-500 text-sm">Atlassian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <i data-lucide="file-text" class="text-blue-400" width="28"></i>
+                        <h3 class="text-2xl font-bold text-white">Education</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-slate-800 pl-6 relative">
+                            <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 bg-slate-700 rounded-full"></div>
+                            <h4 class="text-white font-semibold text-lg">P.G. Diploma in Intl. Business Operations</h4>
+                            <p class="text-teal-400">IGNOU, New Delhi</p>
+                            <div class="flex gap-4 mt-1 text-sm text-slate-500">
+                                <span>2021</span>
+                                <span>•</span>
+                                <span>67%</span>
+                            </div>
+                        </div>
+                        <div class="border-l-2 border-slate-800 pl-6 relative">
+                            <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 bg-slate-700 rounded-full"></div>
+                            <h4 class="text-white font-semibold text-lg">B.Tech in Computer Science</h4>
+                            <p class="text-teal-400">Punjab Technical University</p>
+                            <div class="flex gap-4 mt-1 text-sm text-slate-500">
+                                <span>2016</span>
+                                <span>•</span>
+                                <span>79%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 pt-20 pb-10 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Let's Connect</h2>
+                    <p class="text-slate-400 max-w-md">
+                        Open to opportunities in Product Management, especially within Manufacturing SaaS and AI sectors.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col gap-4 mt-6 md:mt-0">
+                    <a href="mailto:sukhan94bhullar@gmail.com" class="flex items-center gap-3 text-slate-300 hover:text-teal-400 transition-colors">
+                        <div class="p-2 bg-slate-800 rounded-lg"><i data-lucide="mail" width="20"></i></div>
+                        sukhan94bhullar@gmail.com
+                    </a>
+                    <div class="flex items-center gap-3 text-slate-300">
+                        <div class="p-2 bg-slate-800 rounded-lg"><i data-lucide="phone" width="20"></i></div>
+                        +91-9781871321
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 Sukhandeep Kaur. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
